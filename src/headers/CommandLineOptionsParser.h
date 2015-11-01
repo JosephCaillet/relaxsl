@@ -23,11 +23,11 @@ public:
 	const std::string& getXmlVersion() const;
 	const std::string& getXslVersion() const;
 	const std::string& getEncoding() const;
-	const std::vector<std::string>& getOptionsList() const;
 
 private:
 	void buildOptionsList(int argc, char* argv[]);
 	void parseOptionsList();
+	void printUsage();
 };
 
 
