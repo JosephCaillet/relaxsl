@@ -92,7 +92,6 @@ void CommandLineOptionsParser::parseOptionsList()
 		}
 		else if(i == optionsList.size()-1)
 		{
-			cout << "Dernier elm: " << optionsList[i];
 			inputFile = optionsList[i];
 		}
 		else
