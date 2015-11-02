@@ -27,9 +27,9 @@ const string& CommandLineOptionsParser::getEncoding() const
 	return encoding;
 }
 
-void CommandLineOptionsParser::buildOptionsList(int argc, char** argv)
+void CommandLineOptionsParser::buildOptionsList(int argc, char* argv[])
 {
-	for (int i = 0; i<argc; i++)
+	for(int i=0; i<argc; i++)
 	{
 		optionsList.push_back(argv[i]);
 	}
@@ -40,7 +40,7 @@ void CommandLineOptionsParser::parseOptionsList()
 	for(unsigned int i=1; i<optionsList.size(); i++)
 	{
 		cout << "Arg: " << optionsList[i] << endl;
-		if(optionsList[i] == "--xmlV" && i != optionsList.size())
+		if(optionsList[i] == "--xmlV")
 		{
 			xslVersion = optionsList[i+1];
 			cout << "\toption xmlV found. value: " << optionsList[i+1] << endl;
